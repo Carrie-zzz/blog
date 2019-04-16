@@ -1,0 +1,277 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>地址</title>
+  <meta name="keywords" content="menu" />
+  <meta name="description" content="目录菜单" />
+  <meta name="author" content="Carrie_zzz" />
+  <meta name="copyright" content="2019" />
+  <script type="text/javascript" src="/static/js/protect.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+
+    a,
+    img {
+      border: 0;
+    }
+
+    body {
+      font: 12px/180% 'Microsoft Yahei', Helvetica, sans-serif, "宋体";
+    }
+
+    /* expmenu */
+    ul.expmenu {
+      width: 199px;
+      margin: 40px auto;
+    }
+
+    ul.expmenu li div.header {
+      padding: 12px;
+      border-bottom: 1px #fff solid;
+    }
+
+    ul.expmenu li:last-child div.header {
+      border-bottom: none;
+    }
+
+    ul.expmenu li ul li {
+      background-color: #f7f2e5;
+      padding: 12px;
+      border-bottom: 1px solid #d2c8b5;
+      border-top: 1px solid #d2c8b5;
+      color: #727272;
+      text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8);
+    }
+
+    ul.expmenu li ul li:last-child {
+      border-bottom: none;
+    }
+
+    ul.expmenu li ul li.selected {
+      background-color: #f4f4f4;
+    }
+
+    ul.expmenu div.header {
+      color: #203f61;
+      text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.2);
+
+      background: #ae9c7e;
+      /* Old browsers */
+      background: -moz-linear-gradient(top, #ae9c7e 0%, #ae9c7e 100%);
+      /* FF3.6+ */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ae9c7e), color-stop(100%, #ae9c7e));
+      /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(top, #ae9c7e 0%, #ae9c7e 100%);
+      /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(top, #ae9c7e 0%, #ae9c7e 100%);
+      /* Opera 11.10+ */
+      background: -ms-linear-gradient(top, #ae9c7e 0%, #ae9c7e 100%);
+      /* IE10+ */
+      background: linear-gradient(to bottom, #ae9c7e 0%, #ae9c7e 100%);
+      /* W3C */
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ae9c7e', endColorstr='#ae9c7e', GradientType=0);
+      /* IE6-9 */
+    }
+
+    ul.expmenu li div.header .label {
+      background: no-repeat;
+      color: #fff;
+      /*text-shadow: 0px 0px 0px rgba(255, 255, 255, 0.8);*/
+      font-weight: bold;
+    }
+
+    ul.expmenu li div.header .arrow {
+      display: block;
+      width: 16px;
+      height: 16px;
+      background: no-repeat center;
+      float: right;
+    }
+
+    ul.expmenu li div.header .arrow.up {
+      background-image: url(../images/arrow_u.png);
+    }
+
+    ul.expmenu li div.header .arrow.down {
+      background-image: url(../images/arrow_d.png);
+    }
+
+    ul.expmenu li .menu {
+      display: none;
+    }
+
+    /* Mouse Events */
+    ul.expmenu div.header:hover {
+      background: #ae9c7e;
+      /* Old browsers */
+      background: -moz-linear-gradient(top, #ae9c7e 0%, #ae9c7e 100%);
+      /* FF3.6+ */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ae9c7e), color-stop(100%, #ae9c7e));
+      /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(top, #ae9c7e 0%, #ae9c7e 100%);
+      /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(top, #ae9c7e 0%, #ae9c7e 100%);
+      /* Opera 11.10+ */
+      background: -ms-linear-gradient(top, #ae9c7e 0%, #ae9c7e 100%);
+      /* IE10+ */
+      background: linear-gradient(to bottom, #ae9c7e 0%, #ae9c7e 100%);
+      /* W3C */
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ae9c7e', endColorstr='#ae9c7e', GradientType=0);
+      /* IE6-9 */
+      cursor: pointer;
+    }
+
+    ul.expmenu li ul li:not(.selected):hover {
+      background: #efe8d8;
+      /* Old browsers */
+      cursor: pointer;
+    }
+
+    ul.expmenu li ul li:not(.selected):active {
+      background: #f1f1f1;
+      /* Old browsers */
+      cursor: pointer;
+    }
+
+    .menu ol {
+      padding-left: 15px;
+      border: #E7E7E7 1px solid;
+      border-top: none;
+      background: #f7f2e5;
+    }
+
+    .menu li i {
+      background-color: #ae9c7e;
+      padding: 1px 4px;
+      color: #fff;
+      text-shadow: 0px 0px 0px rgba(255, 255, 255, 0.8);
+      font-family: 宋体;
+      font-style: normal;
+    }
+
+    .menu a {
+      color: #3f3f3f;
+      text-decoration: none;
+    }
+
+    .menu .no {
+      display: none;
+    }
+
+    .menu ol a {
+      width: 228px;
+      display: block;
+      line-height: 2em;
+      margin-left: 20px;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+
+      /* 滑动/展开 */
+      $("ul.expmenu li > div.header").click(function () {
+
+        var arrow = $(this).find("span.arrow");
+
+        if (arrow.hasClass("up")) {
+          arrow.removeClass("up");
+          arrow.addClass("down");
+        } else if (arrow.hasClass("down")) {
+          arrow.removeClass("down");
+          arrow.addClass("up");
+        }
+
+        $(this).parent().find("ul.menu").slideToggle();
+
+      });
+
+    });
+  </script>
+  <script language="JavaScript">
+
+    function ShowMenu(obj, n) {
+      var Nav = obj.parentNode;
+      if (!Nav.id) {
+        var BName = Nav.getElementsByTagName("ol");
+        var HName = Nav.getElementsByTagName("h2");
+        var t = 2;
+      } else {
+        var BName = document.getElementById(Nav.id).getElementsByTagName("span");
+        var HName = document.getElementById(Nav.id).getElementsByTagName(".header");
+        var t = 1;
+      }
+      for (var i = 0; i < HName.length; i++) {
+        HName[i].innerHTML = HName[i].innerHTML.replace("-", "+");
+        HName[i].className = "";
+      }
+      obj.className = "h" + t;
+      for (var i = 0; i < BName.length; i++) { if (i != n) { BName[i].className = "no"; } }
+      if (BName[n].className == "no") {
+        BName[n].className = "";
+        obj.innerHTML = obj.innerHTML.replace("+", "-");
+      } else {
+        BName[n].className = "no";
+        obj.className = "";
+        obj.innerHTML = obj.innerHTML.replace("-", "+");
+      }
+    }
+
+  </script>
+</head>
+
+<body>
+
+  <ul class="expmenu">
+    <li>
+      <div class="header">
+        <span class="label">前端</span>
+        <span class="arrow up"></span>
+      </div>
+      <span class="no">
+        <ul class="menu" style="display:block;">
+          <li onClick="javascript:ShowMenu(this,0)"><a href="javascript:void(0)"><i>+</i> 书本系列</a></li>
+          <ol class="no">
+            <a href="https://blog.csdn.net/Carrie_zzz/article/details/88935636" title="陶瓷盆">css解密</a>
+          </ol>
+          <li onClick="javascript:ShowMenu(this,1)"><a href="javascript:void(0)"><i>+</i> 视频系列</a></li>
+          <ol class="no">
+            <a href="javascript:void(0)">java</a>
+            <a href="javascript:void(0)">大数据</a>
+          </ol>
+
+          <li onClick="javascript:ShowMenu(this,2)"><a href="javascript:void(0)"><i>+</i> 网址系列</a></li>
+          <ol class="no">
+            <a href="javascript:void(0)">github</a>
+            <a href="javascript:void(0)">csdn</a>
+          </ol>
+
+          <li onClick="javascript:ShowMenu(this,3)"><a href="javascript:void(0)"><i>+</i> 技巧系列</a></li>
+          <ol class="no">
+            <a href="javascript:void(0)">css技巧</a>
+            <a href="javascript:void(0)">js技巧</a>
+          </ol>
+        </ul>
+      </span>
+    </li>
+    <li>
+      <div class="header">
+        <span class="label">后端</span>
+        <span class="arrow down">></span>
+      </div>
+      <ul class="menu">
+        <li>C#</li>
+      </ul>
+    </li>
+  </ul>
+
+</body>
+
+</html>
